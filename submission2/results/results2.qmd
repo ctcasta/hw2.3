@@ -1,7 +1,7 @@
 ---
 title: "Homework 2"
-subtitle: "Research Methods, Spring 2025"
-author: "Camila"
+subtitle: "Working with Healthcare Cost Reporting Information System (HCRIS)"
+author: "Camila Castaneda"
 format:
   pdf:
     output-file: "camila_castaneda_hwk2"
@@ -22,9 +22,9 @@ pacman::p_load(tidyverse, ggplot2, dplyr, lubridate, readr, readxl, hrbrthemes, 
 #| include: false
 #| eval: true
 getwd()
-load("/Users/ethanmurakami/Documents/GitHub/hmwk2/submission2/Hwk2_workspace2.Rdata")
+load("/Users/camilacastaneda/Downloads/Econ-470/homework2.3/submission3/results/hw2workspace.Rdata")
 ```
-Here is a link to my repository (https://github.com/bemur3/hmwk2)
+Here is a link to my repository ()
 
 Question 1
 ```{r} 
