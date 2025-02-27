@@ -10,6 +10,7 @@ format:
       - \usepackage{float}
       - \floatplacement{table}{H}
 ---
+
 ```{r}
 #| include: false
 if (!require("pacman")) install.packages("pacman")
@@ -18,15 +19,20 @@ pacman::p_load(tidyverse, ggplot2, dplyr, lubridate, readr, readxl, hrbrthemes, 
                ggrepel, survey, foreign, devtools, pdftools, kableExtra, modelsummary,
                kableExtra)
 ```
+
 ```{r}
 #| include: false
 #| eval: true
 getwd()
 load("/Users/camilacastaneda/Downloads/Econ-470/homework2.3/submission3/results/hw2workspace.Rdata")
 ```
+
+
 Here is a link to my repository (https://github.com/ctcasta/hw2.3)
 
 Question 1
+
+
 ```{r} 
 #| echo: false
 #| label: tbl-plans
@@ -46,7 +52,11 @@ ggplot(multi_report_counts, aes(x = fyear, y = num_hospitals)) +
   ) +
   theme_classic()
 ```
+
+
 Question 2
+
+
 ```{r} 
 #| echo: false
 unique_hospital_count <- final.hcris.data %>%
@@ -55,7 +65,11 @@ unique_hospital_count <- final.hcris.data %>%
 
 cat("Number of unique hospital IDs (Medicare provider numbers):", unique_hospital_count, "\n")
 ```
+
+
 Question 3
+
+
 ```{r} 
 #| echo: false
 ggplot(final.hcris.data, aes(x = factor(year), y = tot_charges)) +
@@ -69,7 +83,11 @@ ggplot(final.hcris.data, aes(x = factor(year), y = tot_charges)) +
   ) +
   theme_classic()
 ```
+
+
 Question 4
+
+
 ```{r}
 #| echo: false
 ## Step 1: Calculate discount factor
@@ -98,7 +116,11 @@ ggplot(final.hcris.data, aes(x = as.factor(year), y = price)) +
   theme(axis.text.x = element_text(angle = 45, hjust = 1))
 ```
 
+
+
 Question 5
+
+
 ```{r}
 #| echo: false
 final.hcris.data <- final.hcris.data %>%
@@ -121,6 +143,7 @@ mean.nopen <- round(mean(final.hcris.2012$price[which(final.hcris.2012$penalty==
 print(mean.pen)
 print(mean.nopen)
 ```
+
 ```{r}
 #| echo: false
 final.hcris.2012 <- final.hcris.2012 %>%
